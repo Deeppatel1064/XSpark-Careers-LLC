@@ -2,10 +2,10 @@
   "version": 1,
   "asset_id": "75632d99-2197-4167-a61c-540d9320f862",
   "project_id": "0afc5113-8834-4116-956e-647ce49ffbcc",
-  "url": "src/assets/mihir.jpeg",
-  "r2_key": "a/v1/0afc5113-8834-4116-956e-647ce49ffbcc/75632d99-2197-4167-a61c-540d9320f862/mihir.png",
-  "original_filename": "mihir.png",
+  "url": "/images/mihir.jpeg",
+  "r2_key": "a/v1/0afc5113-8834-4116-956e-647ce49ffbcc/75632d99-2197-4167-a61c-540d9320f862/mihir.jpeg",
+  "original_filename": "mihir.jpeg",
   "size": 928959,
-  "content_type": "image/png",
+  "content_type": "image/jpeg",
   "created_at": "2026-06-21T12:46:29Z"
 }

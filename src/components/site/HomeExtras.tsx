@@ -410,22 +410,22 @@ export function LivePlacements() {
 
 /* ---------------- Candidate Gallery ---------------- */
 const candidates = [
-  { name: "Aadhya Patel", role: "IT Analyst", photo: "src/assets/All images of xsc/Aadhya Patel.jpg" },
-  { name: "Abhinav Joshi", role: "Supply Chain Analyst", photo: "src/assets/All images of xsc/Abhinav Joshi.jpg" },
-  { name: "Abimbola Ogunleye", role: "Software Engineer", photo: "src/assets/All images of xsc/Abimbola Ogunleye.jpg" },
-  { name: "Adewale Adebayo", role: "Senior Associate", photo: "src/assets/All images of xsc/Adewale Adebayo.jpg" },
-  { name: "Anaya Mehta", role: "Sr. Financial Analyst", photo: "src/assets/All images of xsc/Anaya Mehta.jpg" },
-  { name: "Vihaan Patel", role: "Sr. Project Manager", photo: "src/assets/All images of xsc/Vihaan Patel.jpg" },
-  { name: "Ava Martinez", role: "Senior Associate", photo: "src/assets/All images of xsc/Ava Martinez.jpg" },
-  { name: "Thomas Richardson", role: "Consultant", photo: "src/assets/All images of xsc/Thomas Richardson.jpg" },
-  { name: "Ayesha Rahman", role: "Financial Analyst", photo: "src/assets/All images of xsc/Ayesha Rahman.jpg" },
-  { name: "Vivaan Desai", role: "Project Engineer", photo: "src/assets/All images of xsc/Vivaan Desai.jpg" },
-  { name: "Lily Parker", role: "Construction Manager", photo: "src/assets/All images of xsc/Lily Parker.jpg" },
-  { name: "Vishnu Raman", role: "Software Engineer", photo: "src/assets/All images of xsc/Vishnu Raman.jpg" },
-  { name: "Myra Shah", role: "Business Analyst", photo: "src/assets/All images of xsc/Myra Shah.jpg" },
-  { name: "Vamsi Krishna Naidu", role: "Cloud Engineer", photo: "src/assets/All images of xsc/Vamsi Krishna Naidu.jpg" },
-  { name: "Sophia Clark", role: "Financial Analyst", photo: "src/assets/All images of xsc/Sophia Clark.jpg" },
-  { name: "Ryan Mitchell", role: "Senior Consultant", photo: "src/assets/All images of xsc/Ryan Mitchell.jpg" },
+  { name: "Aadhya Patel", role: "IT Analyst", photo: "/images/Aadhya Patel.jpg" },
+  { name: "Abhinav Joshi", role: "Supply Chain Analyst", photo: "/images/Abhinav Joshi.jpg" },
+  { name: "Abimbola Ogunleye", role: "Software Engineer", photo: "/images/Abimbola Ogunleye.jpg" },
+  { name: "Adewale Adebayo", role: "Senior Associate", photo: "/images/Adewale Adebayo.jpg" },
+  { name: "Anaya Mehta", role: "Sr. Financial Analyst", photo: "/images/Anaya Mehta.jpg" },
+  { name: "Vihaan Patel", role: "Sr. Project Manager", photo: "/images/Vihaan Patel.jpg" },
+  { name: "Ava Martinez", role: "Senior Associate", photo: "/images/Ava Martinez.jpg" },
+  { name: "Thomas Richardson", role: "Consultant", photo: "/images/Thomas Richardson.jpg" },
+  { name: "Ayesha Rahman", role: "Financial Analyst", photo: "/images/Ayesha Rahman.jpg" },
+  { name: "Vivaan Desai", role: "Project Engineer", photo: "/images/Vivaan Desai.jpg" },
+  { name: "Lily Parker", role: "Construction Manager", photo: "/images/Lily Parker.jpg" },
+  { name: "Vishnu Raman", role: "Software Engineer", photo: "/images/Vishnu Raman.jpg" },
+  { name: "Myra Shah", role: "Business Analyst", photo: "/images/Myra Shah.jpg" },
+  { name: "Vamsi Krishna Naidu", role: "Cloud Engineer", photo: "/images/Vamsi Krishna Naidu.jpg" },
+  { name: "Sophia Clark", role: "Financial Analyst", photo: "/images/Sophia Clark.jpg" },
+  { name: "Ryan Mitchell", role: "Senior Consultant", photo: "/images/Ryan Mitchell.jpg" },
 ];
 
 export function CandidateGallery() {
