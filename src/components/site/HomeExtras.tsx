@@ -354,11 +354,11 @@ export function FeaturedCaseStudyMihir() {
 /* ---------------- Live Placements Ticker ---------------- */
 const live = [
   { name: "Vijayalakshmi", company: "Intellias", role: "AI Data Engineer", loc: "Ohio", pkg: "140K", photo: "/avatars/f-1.jpg" },
-  { name: "Vishnu Raman", company: "Fiserv", role: "Product Manager", loc: "Milwaukee, WI", pkg: "180K", photo: "src/assets/All images of xsc/Vishnu Raman.jpg" },
-  { name: "Ayesha Rahman", company: "Verisk", role: "Associate Scientist", loc: "Ontario", pkg: "100K CAD", photo: "src/assets/All images of xsc/Ayesha Rahman.jpg" },
-  { name: "Lily Parker", company: "RK Industries", role: "Project Engineer", loc: "Abilene, TX", pkg: "80K", photo: "src/assets/All images of xsc/Lily Parker.jpg" },
-  { name: "Vivek Sharma", company: "EY", role: "Tech Round Scheduled", loc: "New York", pkg: "In progress", photo: "src/assets/All images of xsc/Vivek Sharma.jpg" },
-  { name: "Oluwaseun Adeyemi", company: "Dexian", role: "Interviewing", loc: "Virginia", pkg: "Negotiation", photo: "src/assets/All images of xsc/Oluwaseun Adeyemi.jpg" },
+  { name: "Vishnu Raman", company: "Fiserv", role: "Product Manager", loc: "Milwaukee, WI", pkg: "180K", photo: "/images/Vishnu Raman.jpg" },
+  { name: "Ayesha Rahman", company: "Verisk", role: "Associate Scientist", loc: "Ontario", pkg: "100K CAD", photo: "/images/Ayesha Rahman.jpg" },
+  { name: "Lily Parker", company: "RK Industries", role: "Project Engineer", loc: "Abilene, TX", pkg: "80K", photo: "/images/Lily Parker.jpg" },
+  { name: "Vivek Sharma", company: "EY", role: "Tech Round Scheduled", loc: "New York", pkg: "In progress", photo: "/images/Vivek Sharma.jpg" },
+  { name: "Oluwaseun Adeyemi", company: "Dexian", role: "Interviewing", loc: "Virginia", pkg: "Negotiation", photo: "/images/Oluwaseun Adeyemi.jpg" },
 ];
 
 
