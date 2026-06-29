@@ -9,7 +9,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import logo from "@/assets/xspark-logo.png";
+const logo = "/logo.png";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navbar } from "../components/site/Navbar";
 import { Footer } from "../components/site/Footer";
@@ -53,12 +53,18 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
-            onClick={() => { router.invalidate(); reset(); }}
+            onClick={() => {
+              router.invalidate();
+              reset();
+            }}
             className="rounded-full gradient-primary px-5 py-2 text-sm font-semibold text-primary-foreground"
           >
             Try again
           </button>
-          <a href="/" className="hover-lift-sm rounded-full border border-border px-5 py-2 text-sm font-semibold">
+          <a
+            href="/"
+            className="hover-lift-sm rounded-full border border-border px-5 py-2 text-sm font-semibold"
+          >
             Go home
           </a>
         </div>
@@ -73,20 +79,45 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "XSpark Careers — Global Recruitment & Staffing" },
-      { name: "description", content: "XSpark Careers connects skilled professionals with leading employers across the USA, Canada, UK and Australia." },
+      {
+        name: "description",
+        content:
+          "XSpark Careers connects skilled professionals with leading employers across the USA, Canada, UK and Australia.",
+      },
       { name: "author", content: "XSpark Careers LLC" },
       { name: "theme-color", content: "#0A2540" },
       { property: "og:site_name", content: "XSpark Careers" },
       { property: "og:type", content: "website" },
       { property: "og:title", content: "XSpark Careers — Global Recruitment & Staffing" },
-      { property: "og:description", content: "Accelerate your career. Hire top talent. Grow globally." },
+      {
+        property: "og:description",
+        content: "Accelerate your career. Hire top talent. Grow globally.",
+      },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@XSparkCareers" },
+      {
+        property: "og:image",
+        content: "https://xsparkcareersllc.com/logo.png",
+      },
+      {
+        property: "og:url",
+        content: "https://xsparkcareersllc.com",
+      },
+      {
+        name: "keywords",
+        content:
+          "IT Recruitment, Staffing, USA Jobs, Canada Jobs, Recruitment Agency, XSpark Careers",
+      },
+      {
+        name: "robots",
+        content: "index, follow",
+      },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", type: "image/png", href: logo },
-      { rel: "apple-touch-icon", href: logo },
+      { rel: "icon", href: "/favicon.ico" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+      { rel: "manifest", href: "/site.webmanifest" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -101,10 +132,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "XSpark Careers LLC",
-          url: "/",
+          url: "https://xsparkcareersllc.com",
+          logo: "https://xsparkcareersllc.com/logo.png",
           slogan: "Connecting Talent with Opportunity Worldwide",
           areaServed: ["US", "CA", "GB", "AU"],
-          sameAs: [],
+          sameAs: ["https://www.linkedin.com/company/xspark-careers-llc/"],
         }),
       },
     ],
