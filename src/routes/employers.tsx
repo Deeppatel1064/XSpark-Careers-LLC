@@ -65,7 +65,7 @@ function EmployersPage() {
         title={<>Hire <span className="text-gradient">Skilled Talent</span> Faster</>}
         description="From a critical first hire to a 50-person buildout — we deliver curated, role-ready talent on your timeline."
       >
-        <Link to="/contact" className="hover-lift-sm inline-flex rounded-full gradient-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-glow">
+        <Link to="/book-consultation" className="hover-lift-sm inline-flex rounded-full gradient-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-glow">
           Request Talent
         </Link>
       </PageHero>
