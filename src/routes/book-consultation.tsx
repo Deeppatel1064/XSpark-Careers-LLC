@@ -95,7 +95,11 @@ function RouteComponent() {
     <>
       <PageHero
         eyebrow="Free · No Commitment"
-        title={<>Book Your <span className="text-gradient">Free Consultation</span></>}
+        title={
+          <>
+            Book Your <span className="text-gradient">Free Consultation</span>
+          </>
+        }
         description="Tell us about yourself and we'll match you with the right opportunity."
       />
 

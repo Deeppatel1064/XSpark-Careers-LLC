@@ -23,7 +23,15 @@ export const Route = createFileRoute("/contact")({
 });
 
 function ContactPage() {
-  const [form, setForm] = useState({ name: "", email: "", topic: "Job Seeker", message: "" });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    topic: "Job Seeker",
+    number: "",
+    linkedin: "",
+    visaStatus: "",
+    message: "",
+  });
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -40,6 +48,9 @@ function ContactPage() {
       name: form.name,
       email: form.email,
       topic: form.topic,
+      number: form.number,
+      linkedin: form.linkedin,
+      visaStatus: form.visaStatus,
       message: form.message,
 
       subject: `New ${form.topic} Contact Form`,
@@ -68,6 +79,9 @@ function ContactPage() {
           name: "",
           email: "",
           topic: "Job Seeker",
+          number: "",
+          linkedin: "",
+          visaStatus: "",
           message: "",
         });
       } else {
@@ -104,7 +118,7 @@ function ContactPage() {
 
               <ul className="mt-8 space-y-5">
                 <Info icon={Mail} label="Email" value="info@xsparkcareersllc.com" />
-                <Info icon={Phone} label="Phone" value="+1 442 393 2403" />
+                <Info icon={Phone} label="Phone" value="+1 307 312 8502" />
                 <Info
                   icon={MapPin}
                   label="Headquarters"
@@ -151,7 +165,7 @@ function ContactPage() {
 
                   <div className="grid gap-4 sm:grid-cols-2">
                     <label className="text-sm font-medium text-navy">
-                      Full name *
+                      Full Name *
                       <input
                         required
                         value={form.name}
@@ -160,7 +174,7 @@ function ContactPage() {
                       />
                     </label>
                     <label className="text-sm font-medium text-navy">
-                      Work email *
+                      Work Email *
                       <input
                         required
                         type="email"
@@ -181,6 +195,44 @@ function ContactPage() {
                       <option>Employer / Hiring Manager</option>
                       <option>Referral Partner</option>
                       <option>Press / Other</option>
+                    </select>
+                  </label>
+                  <label className="text-sm font-medium text-navy">
+                    Contact Number *
+                    <input
+                      required
+                      type="number"
+                      value={form.number}
+                      onChange={(e) => setForm({ ...form, number: e.target.value })}
+                      className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+                    />
+                  </label>
+                  <label className="text-sm font-medium text-navy">
+                    Linkedin Id *
+                    <input
+                      required
+                      value={form.linkedin}
+                      onChange={(e) => setForm({ ...form, linkedin: e.target.value })}
+                      className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+                    />
+                  </label>
+                  <label className="text-sm font-medium text-navy">
+                    Visa Status
+                    <select
+                      value={form.visaStatus}
+                      onChange={(e) => setForm({ ...form, visaStatus: e.target.value })}
+                      className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
+                    >
+                      <option>OPT-EAD</option>
+                      <option>STEM OPT</option>
+                      <option>H1B</option>
+                      <option>H4-EAD</option>
+                      <option>GC</option>
+                      <option>US Citizen</option>
+                      <option>Open Work Permit</option>
+                      <option>PGWP (Post-Graduation Work Permit)</option>
+                      <option>Canadian Citizen</option>
+
                     </select>
                   </label>
                   <label className="text-sm font-medium text-navy">

@@ -16,6 +16,7 @@ import { Route as ItServicesProjectsRouteImport } from './routes/it-services-pro
 import { Route as EmployersRouteImport } from './routes/employers'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as C2cContractRouteImport } from './routes/c2c-contract'
+import { Route as BookConsultationRouteImport } from './routes/book-consultation'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ServicesTalentAcquisitionRouteImport } from './routes/services.talent-acquisition'
@@ -59,6 +60,11 @@ const ContactRoute = ContactRouteImport.update({
 const C2cContractRoute = C2cContractRouteImport.update({
   id: '/c2c-contract',
   path: '/c2c-contract',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookConsultationRoute = BookConsultationRouteImport.update({
+  id: '/book-consultation',
+  path: '/book-consultation',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -113,6 +119,7 @@ const ServicesSlugRoute = ServicesSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/book-consultation': typeof BookConsultationRoute
   '/c2c-contract': typeof C2cContractRoute
   '/contact': typeof ContactRoute
   '/employers': typeof EmployersRoute
@@ -131,6 +138,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/book-consultation': typeof BookConsultationRoute
   '/c2c-contract': typeof C2cContractRoute
   '/contact': typeof ContactRoute
   '/employers': typeof EmployersRoute
@@ -150,6 +158,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/book-consultation': typeof BookConsultationRoute
   '/c2c-contract': typeof C2cContractRoute
   '/contact': typeof ContactRoute
   '/employers': typeof EmployersRoute
@@ -170,6 +179,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/book-consultation'
     | '/c2c-contract'
     | '/contact'
     | '/employers'
@@ -188,6 +198,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/book-consultation'
     | '/c2c-contract'
     | '/contact'
     | '/employers'
@@ -206,6 +217,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/book-consultation'
     | '/c2c-contract'
     | '/contact'
     | '/employers'
@@ -225,6 +237,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  BookConsultationRoute: typeof BookConsultationRoute
   C2cContractRoute: typeof C2cContractRoute
   ContactRoute: typeof ContactRoute
   EmployersRoute: typeof EmployersRoute
@@ -290,6 +303,13 @@ declare module '@tanstack/react-router' {
       path: '/c2c-contract'
       fullPath: '/c2c-contract'
       preLoaderRoute: typeof C2cContractRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/book-consultation': {
+      id: '/book-consultation'
+      path: '/book-consultation'
+      fullPath: '/book-consultation'
+      preLoaderRoute: typeof BookConsultationRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -361,6 +381,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  BookConsultationRoute: BookConsultationRoute,
   C2cContractRoute: C2cContractRoute,
   ContactRoute: ContactRoute,
   EmployersRoute: EmployersRoute,
